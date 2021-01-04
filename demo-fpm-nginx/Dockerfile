@@ -7,7 +7,7 @@ RUN echo "deb http://nginx.org/packages/debian jessie nginx" >> /etc/apt/sources
 # 安装 Nginx 与常用命令
 RUN curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add -
 RUN apt-get update && apt-get install -y \
-		curl gnupg2 ca-certificates lsb-release nginx \
+		curl gnupg ca-certificates lsb-release nginx \
 		vim telnet bash-completion
 
 # 安装 PHP 官方扩展，文档 https://github.com/docker-library/docs/tree/master/php
